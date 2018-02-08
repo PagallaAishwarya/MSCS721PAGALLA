@@ -28,7 +28,9 @@ public class RoomSheduler {
 		Boolean end = false;
 		ArrayList<Room> rooms = new ArrayList<>();
                 
-                //Calling methods using switch casse
+                //Calling methods using switch case
+                //fixme :default case
+
 		while (!end) {
                 
 			switch (mainMenu()) {
@@ -67,6 +69,7 @@ public class RoomSheduler {
 	}
         
         //Method list schedule -lists Scheduled Rooms
+
 	protected static String listSchedule(ArrayList<Room> roomList) {
 		String roomName = getRoomName();
 		System.out.println(roomName + " Schedule");
@@ -325,6 +328,7 @@ public class RoomSheduler {
     }
     
 //method fileReader - enables to read files
+// make it final
     private static String fileReader(String file) {
       FileReader in = null;
 		StringBuilder sb = new StringBuilder();
