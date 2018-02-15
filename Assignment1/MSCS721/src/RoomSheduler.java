@@ -1,4 +1,3 @@
-
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.FileReader;
@@ -26,11 +25,9 @@ public class RoomSheduler {
 
 	public static void main(String[] args) {
 		Boolean end = false;
-		ArrayList<Room> rooms = new ArrayList<>();
+		ArrayList<Room> rooms = new ArrayList<Room>();
                 
                 //Calling methods using switch case
-                //fixme :default case
-
 		while (!end) {
                 
 			switch (mainMenu()) {
@@ -69,7 +66,6 @@ public class RoomSheduler {
 	}
         
         //Method list schedule -lists Scheduled Rooms
-
 	protected static String listSchedule(ArrayList<Room> roomList) {
 		String roomName = getRoomName();
 		System.out.println(roomName + " Schedule");
@@ -328,7 +324,6 @@ public class RoomSheduler {
     }
     
 //method fileReader - enables to read files
-// make it final
     private static String fileReader(String file) {
       FileReader in = null;
 		StringBuilder sb = new StringBuilder();
