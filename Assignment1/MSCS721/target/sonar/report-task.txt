@@ -1,0 +1,6 @@
+projectKey=MSCS721:MSCS721
+serverUrl=http://localhost:9000
+serverVersion=7.0.0.36138
+dashboardUrl=http://localhost:9000/dashboard/index/MSCS721:MSCS721
+ceTaskId=AWGcTtYI2BA_U4kUuawy
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWGcTtYI2BA_U4kUuawy

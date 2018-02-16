@@ -28,5 +28,8 @@
   <description>simple Java program for scheduling a room for specific time and date..!!!</description>
   <organization>
   	<name>Marist College</name>
-  </organization>
+  </organization>  
+  <properties>
+  <sonar.exclusions> [...] </sonar.exclusions>
+</properties>
 </project>

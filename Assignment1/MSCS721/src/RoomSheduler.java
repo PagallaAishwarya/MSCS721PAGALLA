@@ -66,14 +66,6 @@ public class RoomSheduler {
 	}
         
         //Method list schedule -lists Scheduled Rooms
-<<<<<<< HEAD
-=======
-        /*nullpoint exception could occur
-	TODO
-	FIXME null point exception
-	*/
-	
->>>>>>> origin/master
 	protected static String listSchedule(ArrayList<Room> roomList) {
 		String roomName = getRoomName();
 		System.out.println(roomName + " Schedule");
@@ -127,9 +119,6 @@ public class RoomSheduler {
         
         
 //removeRoom romoves a room 
-	/*gets roomname ,removes if added
-	if no room added then it shows invalid room
-	*/
 	protected static String removeRoom(ArrayList<Room> roomList) {
 		System.out.println("Remove a room:");
                 String roomname1 = getRoomName();
@@ -140,7 +129,7 @@ public class RoomSheduler {
                 return ("Invalid Room");
                 }             
 	}
-//Method listRoom lists the rooms ,if added else shows invalid room
+
 	protected static String listRooms(ArrayList<Room> roomList) {
 		System.out.println("Room Name - Capacity");
 		System.out.println("---------------------");
@@ -245,7 +234,7 @@ public class RoomSheduler {
 
 		FileWriter file;
 		try {
-			file = new FileWriter("room.json");
+			file = new FileWriter("myJson.json");
 			file.write(roomObj.toJSONString());
 			System.out.println("Successfully Copied ");
 			System.out.println("\nJSON Object: " + roomObj);
@@ -298,7 +287,7 @@ public class RoomSheduler {
 }
 //method importRooms - import rooms from jsonFile created
     private static String importRooms(ArrayList<Room> rooms) {
-        String data = fileReader("room.json");
+        String data = fileReader("myJson.json");
 		for (Object obj : getJSONArray(data)) {
 			JSONObject obj1 = (JSONObject) obj;
 			rooms.add(new Room(obj1.get("roomName").toString(), Integer.parseInt(obj1.get("capacity").toString())));
@@ -310,8 +299,6 @@ public class RoomSheduler {
                 return "";
     }
 //Method importSchedule - imports rooms from jsonFile which is created 
-/*gets information from ,created schedule.json
-*/
     private static String importSchedule(ArrayList<Room> rooms) {
         String data = fileReader("schedule.json");
         for (Object obj : getJSONArray(data)) {
@@ -337,10 +324,6 @@ public class RoomSheduler {
     }
     
 //method fileReader - enables to read files
-<<<<<<< HEAD
-=======
-// TODO :MAKE final
->>>>>>> origin/master
     private static String fileReader(String file) {
       FileReader in = null;
 		StringBuilder sb = new StringBuilder();
